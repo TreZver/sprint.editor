@@ -1,0 +1,10 @@
+Работает на основе построенный на заголовков статьи.<a href="http://htmlbook.ru/samhtml/tekst/zagolovki">Правила построения:</a>
+H1 уже используется как заголовок страницы.
+
+<p class="">Построить из заголовков: {{~it.checked :item:index}}
+    <label>
+        <input {{?item.selected}}checked="checked" {{?}} type="checkbox" value="{{!item.id}}">
+        {{!item.title}}
+    </label>
+    {{~}}
+</p>

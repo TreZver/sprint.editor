@@ -1,0 +1,10 @@
+.sp-block-my_htag .d-flex{
+   display: flex;
+}
+.sp-block-my_htag input[type=text] {
+   width: 100%;
+}
+.sp-block-my_htag select {
+   width: 50px;
+   margin-left: 5px;
+}

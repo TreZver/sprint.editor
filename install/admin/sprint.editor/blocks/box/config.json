@@ -3,6 +3,8 @@
     "layout.html",
     "layout-col.html",
     "layout-col-tab.html",
-    "select-pack.html"
+    "layout-col-settings.html",
+    "select-pack.html",
+    "remote-block.html"
   ]
 }

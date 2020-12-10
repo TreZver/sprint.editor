@@ -1,0 +1,32 @@
+   <p style="display: flex;" class="my_testirovanie--head">
+      <span class="bx-bb">Вопрос:</span><input type="text" class="my_testirovanie-question"><button class="add">Добавить</button>
+   </p>
+
+<div class="sp-result">
+   {{~it.questions :item:index}}
+      <div class="sp-item" data-index="{{=index}}">{{!item.question}}</div>
+   {{~}}
+</div>
+<div class="sp-edit sp-clear">
+   <div class="sp-fields">
+      <div class="sp-edit--form">
+         <div class="sp-field"><span class="sp-note">Вопрос:</span></div>
+         <div class="sp-field">
+            <input name="question" class="sp-edit--question" type="text" placeholder="Вопрос" style="width:98%"/>
+         </div>
+         <div class="sp-field"><span class="sp-note">Варианты ответов:</span></div>
+         <div class="sp-field">
+            <input type="radio" class="sp-edit--radio" name="answer-radio" value="1"><input data-answer="1" class="answer-text" type="text"/>
+         </div>
+         <div class="sp-field">
+            <input type="radio" class="sp-edit--radio" name="answer-radio" value="2"><input data-answer="2" class="answer-text" type="text"/>
+         </div>
+         <div class="sp-field">
+            <input type="radio" class="sp-edit--radio" name="answer-radio" value="3"><input data-answer="3" class="answer-text" type="text"/>
+         </div>
+      </div>
+      <div class="sp-field">
+         <input class="sp-item-del" type="button" value="x" title="Удалить">
+      </div>
+   </div>
+</div>

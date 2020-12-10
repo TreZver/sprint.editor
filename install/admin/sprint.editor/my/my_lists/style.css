@@ -1,0 +1,7 @@
+.sp-block-my_lists .sp-item {
+    margin-bottom: 6px;
+}
+
+.sp-block-my_lists .sp-item input {
+    width: 78%;
+}

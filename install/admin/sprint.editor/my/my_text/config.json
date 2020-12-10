@@ -1,0 +1,12 @@
+{
+   "title": "Текст",
+   "sort": "20",
+   "js": [
+      "https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/trumbowyg.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.21.0/plugins/table/trumbowyg.table.min.js"
+   ],
+   "css": [
+      "https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.23.0/ui/trumbowyg.min.css",
+      "https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.23.0/plugins/table/ui/trumbowyg.table.min.css"
+   ]
+}

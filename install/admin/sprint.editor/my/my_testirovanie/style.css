@@ -1,0 +1,47 @@
+.my_testirovanie--head{
+   display: flex;
+}
+
+.sp-block-my_testirovanie .bx-bb{
+   box-sizing: border-box;
+}
+.sp-block-my_testirovanie .sp-item {
+   padding: 6px;
+   margin: 0 0 5px 0;
+   cursor: move;
+   white-space: nowrap;
+   width: 95%;
+   overflow: hidden;
+   border-bottom: 1px solid #ccc;
+}
+.sp-block-my_testirovanie .sp-item.sp-active {
+   background: rgba(69,68,249,0.4);
+}
+
+.sp-block-my_testirovanie .sp-result {
+   background: #eee;
+   min-height: 55px;
+   padding: 5px;
+}
+.sp-block-my_testirovanie .sp-result .ui-state-highlight{
+   height: 28px;
+   background: rgba(43,245,156,0.4);
+}
+.sp-block-my_testirovanie .sp-edit {
+   display: none;
+   background: #ddd;
+}
+.sp-block-my_testirovanie .sp-fields {
+   padding: 10px;
+}
+.sp-block-my_testirovanie .sp-field {
+   margin-bottom: 10px;
+}
+.sp-block-my_testirovanie .sp-edit--radio{
+   margin: 7px;
+   width: 13px;
+   height: 13px;
+}
+.sp-block-my_testirovanie .answer-text{
+   width: calc(100% - 39px);
+}
