@@ -57,11 +57,7 @@ class AdminEditor
       }
 
       //default setings (simple editor)
-      $userSettings = [
-         'layout_enabled' => [
-               'layout_none',
-         ],
-      ];
+      $userSettings = self::loadSettings('.default');
 
       if (!empty($params['userSettings']['SETTINGS_NAME'])) {
          self::registerSettingsAssets($params['userSettings']['SETTINGS_NAME']);
@@ -264,7 +260,6 @@ class AdminEditor
       $APPLICATION->AddHeadScript('/bitrix/admin/sprint.editor/assets/sprint_editor.js');
       $APPLICATION->AddHeadScript('/bitrix/admin/sprint.editor/assets/sprint_editor_simple.js');
       $APPLICATION->AddHeadScript('/bitrix/admin/sprint.editor/assets/sprint_editor_full.js');
-
       foreach (self::$js as $val) {
          $APPLICATION->AddHeadScript($val);
       }

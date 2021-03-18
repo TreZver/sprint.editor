@@ -36,15 +36,16 @@ sprint_editor.registerBlock('my_text', function ($, $el, data, settings) {
 
         this.afterRender = function () {
             $el.find('.sp-text').trumbowyg({
-                lang: 'ru',
-                //resetCss: true, //стиль страницы  НЕ влиял на внешний вид текста в редакторе
-                defaultLinkTarget: '_blank', //Разрешить устанавливать целевое значение атрибута ссылки
-                minimalLinks: true, //Уменьшите наложение ссылок, чтобы использовать только поля urlи text
-                tagsToRemove: ['script', 'link', 'iframe', 'input','br','script'], //очистить код, удалив все теги, которые вы хотите
-                removeformatPasted: true, //чтобы стили Не вставлялись из буфера обмена
-                semantic: true, //Создает лучший, более семантически ориентированный HTML
-                changeActiveDropdownIcon: true, // выпадающее меню изменится на значок активной подкнопки
-                btns: [ //выбирать кнопки, отображаемые на панели кнопок
+               lang: 'ru',
+               svgPath: '/bitrix/admin/sprint.editor/assets/trimbowyg/svg.svg',
+               resetCss: true, //стиль страницы  НЕ влиял на внешний вид текста в редакторе
+               defaultLinkTarget: '_blank', //Разрешить устанавливать целевое значение атрибута ссылки
+               minimalLinks: true, //Уменьшите наложение ссылок, чтобы использовать только поля urlи text
+               tagsToRemove: ['script', 'link', 'iframe', 'input','br','script'], //очистить код, удалив все теги, которые вы хотите
+               removeformatPasted: true, //чтобы стили Не вставлялись из буфера обмена
+               semantic: true, //Создает лучший, более семантически ориентированный HTML
+               changeActiveDropdownIcon: true, // выпадающее меню изменится на значок активной подкнопки
+               btns: [ //выбирать кнопки, отображаемые на панели кнопок
                   ['table'],
                      ['viewHTML'],
                      ['undo', 'redo'],
@@ -58,10 +59,10 @@ sprint_editor.registerBlock('my_text', function ($, $el, data, settings) {
                      ['fullscreen'],
                   ],
                   plugins: {
-                  table: {
-                     // Some table plugin options, see details below
+                     table: {
+                        // Some table plugin options, see details below
+                     }
                   }
-                }
             });
         }
     }

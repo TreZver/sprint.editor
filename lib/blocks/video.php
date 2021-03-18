@@ -20,8 +20,7 @@ class Video
         );
 
         $services = [
-            'youtube' => Youtube::class,
-            'vimeo'   => Vimeo::class,
+            'youtube' => Youtube::class
         ];
 
         $videoHtml = '';

@@ -7,7 +7,10 @@ $image = Sprint\Editor\Blocks\Image::getImage(
 ]
 );
 ?>
-
- <? if ($image): ?>
-    <div class="sp-image"><a href="<?=$image['ORIGIN_SRC']?>" data-fancybox="sp-image"><img alt="<?= $image['DESCRIPTION'] ?>" src="<?= $image['SRC'] ?>"></a></div>
+<? if ($image): ?>
+   <div class="sp-image pl0  col col-<?=$block['settings']['width']?> ">
+      <a href="<?=$image['ORIGIN_SRC']?>" data-fancybox="sp-image">
+         <img alt="<?= $image['DESCRIPTION'] ?>" src="<?= $image['SRC'] ?>">
+      </a>
+   </div>
 <? endif; ?>

@@ -1,7 +1,24 @@
 .sp-block-my_lists .sp-item {
-    margin-bottom: 6px;
+   margin-bottom: 6px;
+   display: flex;
 }
 
-.sp-block-my_lists .sp-item input {
-    width: 78%;
+.sp-block-my_lists input[type=text]{
+   flex: 1;
+   transition: flex 0.5s linear;
+   -webkit-transition: flex 0.5s linear;
+   -moz-transition: flex 0.5s linear;
+   -ms-transition: flex 0.5s linear;
+   -o-transition: flex 0.5s linear;
+}
+
+
+.sp-block-my_lists .sp-item-link{
+   margin-left: 5px;
+}
+.sp-block-my_lists .sp-item-handle{
+   margin: 0 5px;
+}
+.sp-block-my_lists input[type=text]:focus{
+   flex: 6;
 }

@@ -1,5 +1,6 @@
 .editor_altspu{
    margin-bottom: 5px;
+   overflow: hidden;
 }
 .editor_altspu table{
    border-collapse: collapse;
@@ -22,11 +23,15 @@
    -o-transform: translate(-50%, -50%);
 }
 /* my_text */
-.editor_altspu ul{
+
+.editor_altspu ul,
+.editor_altspu ol{
    margin: 20px 0;
    padding: 0;
-   list-style-type: circle;
    margin-left: 20px;
+}
+.editor_altspu ul li{
+   list-style-type: circle;
 }
 .editor_altspu li{
    margin: 5px 0;

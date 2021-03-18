@@ -327,7 +327,6 @@ function sprint_editor_simple($, currentEditorParams, currentEditorValue) {
          blockData['nameold'] = blockData.name;
          blockData.name = 'dump';
       }
-
       var uid = sprint_editor.makeUid();
       var blockSettings = sprint_editor.getBlockSettings(blockData.name, currentEditorParams);
       var $box = $(sprint_editor.renderBlock(blockData, blockSettings, uid, currentEditorParams));

@@ -211,16 +211,17 @@ var sprint_editor = {
         }
 
         var areas = entry.getAreas();
+        localStorage.setItem("data", JSON.stringify(areas));
         for (var prop in areas) {
             if (areas.hasOwnProperty(prop)) {
                 var area = areas[prop];
                 var adata = area.block.collectData();
+                adata['name'] = area.blockName;
                 if (area.dataFrom) {
                     blockData[area.dataKey] = adata[area.dataFrom];
                 } else {
                     blockData[area.dataKey] = adata;
                 }
-
             }
         }
 

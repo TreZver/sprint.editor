@@ -1,71 +1,70 @@
 sprint_editor.registerBlock('my_lists', function ($, $el, data, settings) {
-    data = $.extend({
-        elements: [{text: ''}, {text: ''}]
-    }, data);
+   data = $.extend({
+      elements: [{ text: '' }, { text: '' }]
+   }, data);
 
-    this.getData = function () {
-        return data;
-    };
+   this.getData = function () {
+      return data;
+   };
 
-    this.collectData = function () {
-        var trimed = [];
-        $el.find('.sp-item-text').each(function () {
-            var text = $.trim(
-                $(this).val()
-            );
+   this.collectData = function () {
+      var trimed = [];
+      $el.find('.sp-item').each(function( index, element ){
+         var text = $.trim($(element).find('.sp-item-text').val());
+         var link = $.trim($(element).find('.sp-item-link').val());
+         if (text) {
+            trimed.push({
+               text: text,
+               link: link
+            });
+         }
+      });
+      data.elements = trimed;
+      return data;
+   };
 
-            if (text) {
-                trimed.push({
-                    text: text
-                });
-            }
-        });
-        data.elements = trimed;
-        return data;
-    };
+   this.afterRender = function () {
+      var $res = $el.find('.sp-lists-result');
 
-    this.afterRender = function () {
-        var $res = $el.find('.sp-lists-result');
+      $res.sortable({
+         items: ".sp-item",
+         handle: ".sp-item-handle",
+      });
 
-        $res.sortable({
-            items: ".sp-item",
-            handle: ".sp-item-handle",
-        });
+      $res.html(
+         sprint_editor.renderTemplate('my_lists-items', data)
+      );
 
-        $res.html(
-            sprint_editor.renderTemplate('my_lists-items', data)
-        );
+      $res.on('click', '.sp-item-del', function (e) {
+         e.preventDefault();
+         $(this).closest('.sp-item').remove();
+      });
 
-        $res.on('click', '.sp-item-del', function (e) {
+      $res.on('keypress', '.sp-item-text', function (e) {
+         var keyCode = e.keyCode || e.which;
+         if (keyCode === 13) {
             e.preventDefault();
-            $(this).closest('.sp-item').remove();
-        });
+            addItem(true);
+         }
+      });
 
-        $res.on('keypress', '.sp-item-text', function (e) {
-            var keyCode = e.keyCode || e.which;
-            if (keyCode === 13) {
-                e.preventDefault();
-                addItem(true);
-            }
-        });
+      $el.on('click', '.sp-lists-add', function (e) {
+         e.preventDefault();
+         addItem(false);
+      });
 
-        $el.on('click', '.sp-lists-add', function (e) {
-            e.preventDefault();
-            addItem(false);
-        });
+      function addItem(focus) {
+         $res.append(
+            sprint_editor.renderTemplate('my_lists-items', {
+               elements: [
+                  { text: '' }
+               ]
+            })
+         );
 
-        function addItem(focus) {
-            $res.append(
-                sprint_editor.renderTemplate('my_lists-items', {
-                    elements: [
-                        {text: ''}
-                    ]
-                })
-            );
-
-            if (focus) {
-                $res.find('.sp-item-text').last().focus();
-            }
-        }
-    }
+         if (focus) {
+            $res.find('.sp-item-text').last().focus();
+         }
+      }
+   }
 });

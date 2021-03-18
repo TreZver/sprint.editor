@@ -1,18 +1,11 @@
-.sp-block-my_text .trumbowyg-textarea {
-    min-height: 150px;
+
+.trumbowyg-editor {
+   min-height: 100px !important;
 }
-.sp-block-my_text .trumbowyg-fullscreen{
-   height: 95%;
-}
-.sp-block-my_text .trumbowyg-editor {
-    min-height: 120px;
-    padding: 5px;
-    background-color: white;
-}
-.sp-block-my_text .trumbowyg-editor  {
-   min-height: 70px;
-   padding: 5px;
-   background-color: white;
+.trumbowyg-editor{
+   height: auto !important;
+   padding-top:10px !important;
+   padding-right:10px !important;
 }
 
 .sp-block-my_text .trumbowyg-box {
